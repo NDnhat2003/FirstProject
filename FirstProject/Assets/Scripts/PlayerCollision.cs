@@ -11,6 +11,7 @@ public class PlayerCollision : MonoBehaviour
         if (collision.collider.tag == "Obstacle")
         {
             playerMoverment.enabled = false;
+            FindObjectOfType<GameManager>().endGame();
         }
     }
 }
